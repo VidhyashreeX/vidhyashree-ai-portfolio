@@ -96,10 +96,21 @@ export default {
           from: { height: "var(--radix-accordion-content-height)" },
           to: { height: "0" },
         },
+        "smoke-1": {
+          "0%, 100%": { transform: "translate(0, 0) scale(1)" },
+          "50%": { transform: "translate(2%, 2%) scale(1.1)" },
+        },
+        "smoke-2": {
+          "0%, 100%": { transform: "translate(0, 0) scale(1.1)" },
+          "50%": { transform: "translate(-2%, -2%) scale(1)" },
+        },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
+        "smoke-1": "smoke-1 15s ease-in-out infinite",
+        "smoke-2": "smoke-2 20s ease-in-out infinite",
+        "pulse-slow": "pulse 8s cubic-bezier(0.4, 0, 0.6, 1) infinite",
       },
     },
   },
