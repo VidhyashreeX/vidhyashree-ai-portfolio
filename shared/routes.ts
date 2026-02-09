@@ -1,5 +1,5 @@
 import { z } from 'zod';
-import { insertMessageSchema, insertProjectSchema, insertSkillSchema, projects, skills, messages } from './schema';
+import { insertMessageSchema, insertProjectSchema, insertSkillSchema, insertEducationSchema, projects, skills, messages, education } from './schema';
 
 // ============================================
 // SHARED ERROR SCHEMAS
@@ -47,6 +47,15 @@ export const api = {
       },
     },
   },
+  education: {
+    list: {
+      method: 'GET' as const,
+      path: '/api/education' as const,
+      responses: {
+        200: z.array(z.custom<typeof education.$inferSelect>()),
+      },
+    },
+  },
   messages: {
     create: {
       method: 'POST' as const,
@@ -80,4 +89,5 @@ export function buildUrl(path: string, params?: Record<string, string | number>)
 // ============================================
 export type ProjectListResponse = z.infer<typeof api.projects.list.responses[200]>;
 export type SkillListResponse = z.infer<typeof api.skills.list.responses[200]>;
+export type EducationListResponse = z.infer<typeof api.education.list.responses[200]>;
 export type MessageInput = z.infer<typeof api.messages.create.input>;

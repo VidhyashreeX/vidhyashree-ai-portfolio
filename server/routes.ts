@@ -29,6 +29,12 @@ export async function registerRoutes(
     res.json(skills);
   });
 
+  // === Education ===
+  app.get(api.education.list.path, async (req, res) => {
+    const edu = await storage.getEducation();
+    res.json(edu);
+  });
+
   // === Contact Messages ===
   app.post(api.messages.create.path, async (req, res) => {
     try {
@@ -107,6 +113,30 @@ async function seedDatabase() {
 
     for (const project of projectsList) {
       await storage.createProject(project);
+    }
+
+    // Seed Education
+    const eduList = [
+      {
+        institution: "Stanford University",
+        degree: "PhD",
+        field: "Artificial Intelligence",
+        startYear: "2018",
+        endYear: "2023",
+        description: "Dissertation on 'Latent Space Optimization for Generative Models'."
+      },
+      {
+        institution: "MIT",
+        degree: "Master of Science",
+        field: "Computer Science",
+        startYear: "2016",
+        endYear: "2018",
+        description: "Focus on Computer Vision and Robotic Perception."
+      }
+    ];
+
+    for (const edu of eduList) {
+      await storage.createEducation(edu);
     }
     
     console.log("Database seeded successfully.");
