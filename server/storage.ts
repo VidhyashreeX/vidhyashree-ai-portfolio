@@ -12,7 +12,7 @@ import {
   type InsertMessage,
   type Education,
   type InsertEducation
-} from "@shared/schema";
+} from "../shared/schema";
 import { eq, desc } from "drizzle-orm";
 
 export interface IStorage {
