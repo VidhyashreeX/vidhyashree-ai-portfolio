@@ -99,3 +99,31 @@
   border: 1px solid rgba(255, 255, 255, 0.05);
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
 }
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 6rem;
+}
+
+@keyframes gradient-flow {
+  0% {
+    background-position: 0% 0%;
+  }
+  50% {
+    background-position: 100% 100%;
+  }
+  100% {
+    background-position: 0% 0%;
+  }
+}
+
+.scroll-gradient {
+  --scroll-progress: 0;
+  background-size: 100% 200%;
+  background-position: 50% calc(var(--scroll-progress) * 100%);
+}
+
+.animated-gradient {
+  background-size: 200% 200%;
+  animation: gradient-flow 18s ease-in-out infinite;
+}

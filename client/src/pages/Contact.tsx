@@ -8,7 +8,7 @@ import { Textarea } from "@/components/ui/textarea";
 import { Button } from "@/components/ui/button";
 import { useToast } from "@/hooks/use-toast";
 import { motion } from "framer-motion";
-import { Send, Mail, MapPin, Loader2 } from "lucide-react";
+import { Send, Loader2, Github, Linkedin, Mail, MapPin } from "lucide-react";
 
 export default function Contact() {
   const { toast } = useToast();
@@ -18,7 +18,7 @@ export default function Contact() {
     resolver: zodResolver(insertMessageSchema),
     defaultValues: {
       name: "",
-      email: "",
+      email: "vidyashri1510@gmail.com",
       message: "",
     },
   });
@@ -44,54 +44,18 @@ export default function Contact() {
   };
 
   return (
-    <div className="min-h-screen pt-32 pb-20 px-4 md:px-8 max-w-7xl mx-auto flex flex-col md:flex-row gap-12 lg:gap-24">
-      <div className="flex-1">
+    <section className="pt-20 pb-16 px-4 md:px-8 max-w-7xl mx-auto">
+      <div className="grid gap-10 md:grid-cols-2 items-start">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
+          className="md:order-1"
         >
-          <h2 className="text-4xl md:text-5xl font-bold font-display mb-6">Let's Connect</h2>
-          <p className="text-lg text-muted-foreground mb-12 max-w-md leading-relaxed">
-            Have a project in mind or want to discuss the future of tech? 
-            Send me a message and let's start a conversation.
-          </p>
-
-          <div className="space-y-8">
-            <div className="flex items-center gap-4 group">
-              <div className="p-4 rounded-full glass group-hover:bg-primary/10 transition-colors duration-300">
-                <Mail className="w-6 h-6 text-primary" />
-              </div>
-              <div>
-                <h4 className="font-semibold text-foreground">Email Me</h4>
-                <a href="mailto:hello@example.com" className="text-muted-foreground hover:text-primary transition-colors">
-                  hello@example.com
-                </a>
-              </div>
-            </div>
-
-            <div className="flex items-center gap-4 group">
-              <div className="p-4 rounded-full glass group-hover:bg-primary/10 transition-colors duration-300">
-                <MapPin className="w-6 h-6 text-primary" />
-              </div>
-              <div>
-                <h4 className="font-semibold text-foreground">Location</h4>
-                <p className="text-muted-foreground">San Francisco, CA</p>
-              </div>
-            </div>
-          </div>
-        </motion.div>
-      </div>
-
-      <motion.div
-        initial={{ opacity: 0, x: 20 }}
-        animate={{ opacity: 1, x: 0 }}
-        transition={{ duration: 0.5, delay: 0.2 }}
-        className="flex-1"
-      >
-        <div className="glass p-8 md:p-10 rounded-3xl border border-white/5 shadow-2xl shadow-black/20">
+          <div className="glass p-6 md:p-7 rounded-2xl border border-white/5 shadow-2xl shadow-black/20 max-w-md">
+            <h2 className="text-2xl md:text-3xl font-bold font-display mb-5">Contact</h2>
           <Form {...form}>
-            <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
+              <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-4">
               <FormField
                 control={form.control}
                 name="name"
@@ -100,28 +64,9 @@ export default function Contact() {
                     <FormLabel className="text-muted-foreground">Name</FormLabel>
                     <FormControl>
                       <Input
-                        placeholder="John Doe"
+                        placeholder="kaveri"
                         {...field}
-                        className="bg-background/30 border-white/10 focus:border-primary/50 h-12 rounded-xl transition-all"
-                      />
-                    </FormControl>
-                    <FormMessage />
-                  </FormItem>
-                )}
-              />
-
-              <FormField
-                control={form.control}
-                name="email"
-                render={({ field }) => (
-                  <FormItem>
-                    <FormLabel className="text-muted-foreground">Email</FormLabel>
-                    <FormControl>
-                      <Input
-                        placeholder="john@example.com"
-                        type="email"
-                        {...field}
-                        className="bg-background/30 border-white/10 focus:border-primary/50 h-12 rounded-xl transition-all"
+                        className="bg-background/30 border-white/10 focus:border-primary/50 h-10 rounded-xl transition-all"
                       />
                     </FormControl>
                     <FormMessage />
@@ -137,9 +82,9 @@ export default function Contact() {
                     <FormLabel className="text-muted-foreground">Message</FormLabel>
                     <FormControl>
                       <Textarea
-                        placeholder="Tell me about your project..."
+                        placeholder="Write your message..."
                         {...field}
-                        className="bg-background/30 border-white/10 focus:border-primary/50 min-h-[150px] rounded-xl resize-none transition-all"
+                        className="bg-background/30 border-white/10 focus:border-primary/50 min-h-[100px] rounded-xl resize-none transition-all"
                       />
                     </FormControl>
                     <FormMessage />
@@ -150,7 +95,7 @@ export default function Contact() {
               <Button
                 type="submit"
                 disabled={isPending}
-                className="w-full h-12 rounded-xl bg-primary text-primary-foreground font-semibold hover:bg-primary/90 hover:shadow-[0_0_20px_rgba(0,240,255,0.4)] transition-all duration-300"
+                className="w-full h-10 rounded-xl bg-primary text-primary-foreground font-semibold hover:bg-primary/90 hover:shadow-[0_0_20px_rgba(0,240,255,0.4)] transition-all duration-300"
               >
                 {isPending ? (
                   <Loader2 className="w-5 h-5 animate-spin" />
@@ -163,8 +108,49 @@ export default function Contact() {
               </Button>
             </form>
           </Form>
+          </div>
+        </motion.div>
+
+        <motion.div
+          initial={{ opacity: 0, x: 20 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.5, delay: 0.2 }}
+          className="md:pt-6 md:order-2"
+        >
+          <h3 className="text-3xl md:text-4xl font-bold font-display mb-6">Get in touch</h3>
+          <div className="flex flex-col items-start gap-4">
+            <a
+              href="https://github.com/VidhyashreeX"
+              target="_blank"
+              rel="noreferrer"
+              aria-label="GitHub Profile"
+              className="glass p-4 rounded-2xl border border-white/10 hover:border-primary/50 hover:text-primary transition-all duration-300"
+            >
+              <Github className="w-6 h-6" />
+            </a>
+            <a
+              href="https://www.linkedin.com/in/vidhyashree-s"
+              target="_blank"
+              rel="noreferrer"
+              aria-label="LinkedIn Profile"
+              className="glass p-4 rounded-2xl border border-white/10 hover:border-primary/50 hover:text-primary transition-all duration-300"
+            >
+              <Linkedin className="w-6 h-6" />
+            </a>
+            <a
+              href="mailto:vidyashri1510@gmail.com"
+              aria-label="Email"
+              className="glass p-4 rounded-2xl border border-white/10 hover:border-primary/50 hover:text-primary transition-all duration-300"
+            >
+              <Mail className="w-6 h-6" />
+            </a>
+          </div>
+          <div className="mt-6 flex items-center justify-start gap-3 glass p-4 rounded-2xl border border-white/10 text-foreground text-left w-fit">
+            <MapPin className="w-6 h-6" />
+            <span>Bengaluru</span>
+          </div>
+        </motion.div>
         </div>
-      </motion.div>
-    </div>
+    </section>
   );
 }
