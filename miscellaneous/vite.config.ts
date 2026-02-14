@@ -12,12 +12,12 @@ export default defineConfig({
   plugins: [react()],
   resolve: {
     alias: {
-      "@": path.resolve(rootDir, "client", "src"),
-      "@shared": path.resolve(rootDir, "shared"),
+      "@": path.resolve(rootDir, "FE", "src"),
+      "@shared": path.resolve(rootDir, "miscellaneous", "shared"),
       "@assets": path.resolve(rootDir, "attached_assets"),
     },
   },
-  root: path.resolve(rootDir, "client"),
+  root: path.resolve(rootDir, "FE"),
   build: {
     outDir: path.resolve(rootDir, "dist/public"),
     emptyOutDir: true,

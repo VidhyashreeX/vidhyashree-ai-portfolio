@@ -127,3 +127,23 @@ html {
   background-size: 200% 200%;
   animation: gradient-flow 18s ease-in-out infinite;
 }
+
+.site-photo-bg {
+  background-repeat: no-repeat;
+  background-position: right center;
+  background-size: auto 90vh;
+}
+
+@media (max-width: 1024px) {
+  .site-photo-bg {
+    background-size: auto 82vh;
+    background-position: right -8vw center;
+  }
+}
+
+@media (max-width: 768px) {
+  .site-photo-bg {
+    background-size: cover;
+    background-position: center;
+  }
+}

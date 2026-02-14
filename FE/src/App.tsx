@@ -7,7 +7,6 @@ import { Route, Switch } from "wouter";
 import { EnergyBackground } from "@/components/EnergyBackground";
 
 import Home from "@/pages/Home";
-import Projects from "@/pages/Projects";
 import NotFound from "@/pages/not-found";
 
 function App() {
@@ -18,7 +17,6 @@ function App() {
           <EnergyBackground />
           <Switch>
             <Route path="/" component={Home} />
-            <Route path="/projects" component={Projects} />
             <Route component={NotFound} />
           </Switch>
           <Toaster />

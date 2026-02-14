@@ -58,7 +58,7 @@ export default function Projects({ embedded = false }: { embedded?: boolean }) {
   }
 
   return (
-    <div className={embedded ? "py-10 px-4 md:px-8 max-w-7xl mx-auto w-full" : "min-h-screen pt-32 pb-20 px-4 md:px-8 max-w-7xl mx-auto"}>
+    <div className={embedded ? "relative py-10 px-4 md:px-8 max-w-7xl mx-auto w-full" : "relative min-h-screen pt-32 pb-20 px-4 md:px-8 max-w-7xl mx-auto"}>
       {!embedded && (
         <div className="fixed top-6 left-4 right-4 md:left-8 md:right-8 z-40 flex items-center justify-between pointer-events-none">
           <Link

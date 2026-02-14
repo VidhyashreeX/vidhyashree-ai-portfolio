@@ -8,7 +8,7 @@ import { Textarea } from "@/components/ui/textarea";
 import { Button } from "@/components/ui/button";
 import { useToast } from "@/hooks/use-toast";
 import { motion } from "framer-motion";
-import { Send, Loader2, Github, Linkedin, Mail, MapPin } from "lucide-react";
+import { Send, Loader2, Github, Linkedin, Mail } from "lucide-react";
 
 export default function Contact() {
   const { toast } = useToast();
@@ -144,10 +144,6 @@ export default function Contact() {
             >
               <Mail className="w-6 h-6" />
             </a>
-          </div>
-          <div className="mt-6 flex items-center justify-start gap-3 glass p-4 rounded-2xl border border-white/10 text-foreground text-left w-fit">
-            <MapPin className="w-6 h-6" />
-            <span>Bengaluru</span>
           </div>
         </motion.div>
         </div>

@@ -1,0 +1,878 @@
+%PDF-1.4
+%‚„œ”
+1 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica >>
+endobj
+2 0 obj
+<< /Length 1639 >>
+stream
+BT
+/F1 10 Tf
+14 TL
+50 728 Td
+() Tj
+T*
+(FUTURE-FLOW PORTFOLIO DOCUMENTATION) Tj
+T*
+(-----------------------------------) Tj
+T*
+() Tj
+T*
+() Tj
+T*
+() Tj
+T*
+(1\) PROJECT PURPOSE \(FOR A 12-YEAR-OLD\)) Tj
+T*
+(--------------------------------------) Tj
+T*
+() Tj
+T*
+(This project is a personal portfolio website.) Tj
+T*
+(Think of it like an interactive digital storybook where each section tells a part of the) Tj
+T*
+(developer's journey:) Tj
+T*
+(? Who she is) Tj
+T*
+(? What she can build) Tj
+T*
+(? What projects she has done) Tj
+T*
+(? How to contact her) Tj
+T*
+() Tj
+T*
+(The goal is to look modern and animated while still being fast and easy to use.) Tj
+T*
+() Tj
+T*
+() Tj
+T*
+(2\) WHAT THIS APP DOES) Tj
+T*
+(---------------------) Tj
+T*
+() Tj
+T*
+(? Shows a full-screen personal background image with animated energy effects.) Tj
+T*
+(? Displays a hero section with typing animation.) Tj
+T*
+(? Shows About + Experience content.) Tj
+T*
+(? Shows a horizontally scrolling Projects section with 9 slots.) Tj
+T*
+(? Shows bottom action controls \(Contact, CV\) only when the user reaches the end of the page.) Tj
+T*
+(? Exposes backend APIs for projects, skills, education, and contact messages.) Tj
+T*
+(? Seeds initial sample data when DB/storage is empty.) Tj
+T*
+() Tj
+T*
+() Tj
+T*
+(3\) MAIN TECHNOLOGY STACK) Tj
+T*
+(------------------------) Tj
+T*
+() Tj
+T*
+() Tj
+T*
+() Tj
+T*
+(FRONTEND) Tj
+T*
+(--------) Tj
+T*
+() Tj
+T*
+(? React 18 + TypeScript) Tj
+T*
+(? Vite) Tj
+T*
+(? Tailwind CSS) Tj
+T*
+(? Framer Motion) Tj
+T*
+(? React Query) Tj
+T*
+(? Wouter \(routing\)) Tj
+T*
+(? Three.js + @react-three/fiber) Tj
+T*
+() Tj
+ET
+BT /F1 9 Tf 50 30 Td (Page 1 of 8) Tj ET
+endstream
+endobj
+3 0 obj
+<< /Length 1300 >>
+stream
+BT
+/F1 10 Tf
+14 TL
+50 728 Td
+() Tj
+T*
+(BACKEND) Tj
+T*
+(-------) Tj
+T*
+() Tj
+T*
+(? Node.js + Express 5) Tj
+T*
+(? TypeScript) Tj
+T*
+(? Drizzle ORM + Zod validation) Tj
+T*
+(? PostgreSQL driver \(`pg`\) with in-memory fallback storage) Tj
+T*
+() Tj
+T*
+() Tj
+T*
+(BUILD/TOOLING) Tj
+T*
+(-------------) Tj
+T*
+() Tj
+T*
+(? esbuild \(server bundle\)) Tj
+T*
+(? Vite \(client build\)) Tj
+T*
+(? tsx \(run TS scripts\)) Tj
+T*
+() Tj
+T*
+() Tj
+T*
+(4\) PROGRAMMING LANGUAGES AND TRADEOFFS) Tj
+T*
+(--------------------------------------) Tj
+T*
+() Tj
+T*
+() Tj
+T*
+() Tj
+T*
+(TYPESCRIPT) Tj
+T*
+(----------) Tj
+T*
+() Tj
+T*
+(Advantages:) Tj
+T*
+(? Catches many bugs before runtime.) Tj
+T*
+(? Great IDE autocomplete and safer refactors.) Tj
+T*
+(? Better team readability for large projects.) Tj
+T*
+() Tj
+T*
+(Disadvantages:) Tj
+T*
+(? Adds type complexity for beginners.) Tj
+T*
+(? Requires compile step and type maintenance.) Tj
+T*
+() Tj
+T*
+() Tj
+T*
+(JAVASCRIPT \(RUNTIME\)) Tj
+T*
+(--------------------) Tj
+T*
+() Tj
+T*
+(Advantages:) Tj
+T*
+(? Runs directly in browser and Node.) Tj
+T*
+(? Huge ecosystem and community support.) Tj
+T*
+() Tj
+T*
+(Disadvantages:) Tj
+T*
+(? Dynamic behavior can cause runtime bugs.) Tj
+T*
+(? Async logic can be confusing without structure.) Tj
+T*
+() Tj
+T*
+() Tj
+ET
+BT /F1 9 Tf 50 30 Td (Page 2 of 8) Tj ET
+endstream
+endobj
+4 0 obj
+<< /Length 1737 >>
+stream
+BT
+/F1 10 Tf
+14 TL
+50 728 Td
+(CSS / TAILWIND UTILITY STYLING) Tj
+T*
+(------------------------------) Tj
+T*
+() Tj
+T*
+(Advantages:) Tj
+T*
+(? Fast UI iteration.) Tj
+T*
+(? Consistent spacing, color, and responsive behavior.) Tj
+T*
+() Tj
+T*
+(Disadvantages:) Tj
+T*
+(? Long class strings can be hard to scan.) Tj
+T*
+(? Needs strong design discipline to avoid inconsistency.) Tj
+T*
+() Tj
+T*
+() Tj
+T*
+(SQL + ORM MODEL APPROACH \(DRIZZLE\)) Tj
+T*
+(----------------------------------) Tj
+T*
+() Tj
+T*
+(Advantages:) Tj
+T*
+(? Strong schema structure for data.) Tj
+T*
+(? Type-safe query layer.) Tj
+T*
+() Tj
+T*
+(Disadvantages:) Tj
+T*
+(? Schema changes need migration discipline.) Tj
+T*
+(? ORM abstraction can hide SQL details for beginners.) Tj
+T*
+() Tj
+T*
+() Tj
+T*
+(5\) CURRENT FOLDER ORGANIZATION \(LABELED\)) Tj
+T*
+(----------------------------------------) Tj
+T*
+() Tj
+T*
+() Tj
+T*
+(? `client/`: Browser UI application) Tj
+T*
+(  - `client/src/pages/`: page-level screens and layout logic) Tj
+T*
+(  - `client/src/components/`: reusable UI sections) Tj
+T*
+(  - `client/src/hooks/`: API/data hooks) Tj
+T*
+(  - `client/src/lib/`: shared frontend utilities) Tj
+T*
+(  - `client/public/`: static assets \(images, favicon\)) Tj
+T*
+(? `server/`: Express API and runtime server) Tj
+T*
+(? `shared/`: shared API contracts and schemas used by both frontend and backend) Tj
+T*
+(? `script/`: build pipeline scripts) Tj
+T*
+(? `api/`: deployment/serverless entry integration) Tj
+T*
+(? `dist/`: generated production output) Tj
+T*
+() Tj
+T*
+() Tj
+T*
+(6\) IMPORTANT FILES AND WHY THEY MATTER) Tj
+T*
+(--------------------------------------) Tj
+T*
+() Tj
+T*
+() Tj
+T*
+() Tj
+T*
+(UI SHELL AND ROUTING) Tj
+T*
+(--------------------) Tj
+ET
+BT /F1 9 Tf 50 30 Td (Page 3 of 8) Tj ET
+endstream
+endobj
+5 0 obj
+<< /Length 2011 >>
+stream
+BT
+/F1 10 Tf
+14 TL
+50 728 Td
+() Tj
+T*
+(1. `client/src/App.tsx`) Tj
+T*
+(? Key lines:) Tj
+T*
+(  - line 17 mounts global background animation layer.) Tj
+T*
+(  - lines 18-20 set route handling.) Tj
+T*
+(? Purpose: Entry UI shell and route switch.) Tj
+T*
+() Tj
+T*
+(2. `client/src/pages/Home.tsx`) Tj
+T*
+(? Key lines:) Tj
+T*
+(  - lines 55-87 typing animation state machine.) Tj
+T*
+(  - lines 89-104 bottom-of-page visibility logic.) Tj
+T*
+(  - lines 106-111 wheel-to-horizontal project scroll mapping.) Tj
+T*
+(  - lines 222-280 bottom fixed glass controls and signature text.) Tj
+T*
+(? Purpose: Main single-page experience and interaction logic.) Tj
+T*
+() Tj
+T*
+(3. `client/src/components/EnergyBackground.tsx`) Tj
+T*
+(? Key lines:) Tj
+T*
+(  - lines 22-43 wire animation frame update.) Tj
+T*
+(  - lines 99-244 cursor smoke particle system.) Tj
+T*
+(  - lines 213-220 bottom-zone color shift logic.) Tj
+T*
+(  - lines 253-264 full-screen photo + overlay setup.) Tj
+T*
+(? Purpose: Background visual engine \(photo + particles + neon wires\).) Tj
+T*
+() Tj
+T*
+(4. `client/src/components/Navigation.tsx`) Tj
+T*
+(? Key lines:) Tj
+T*
+(  - lines 55-72 active section tracking with IntersectionObserver.) Tj
+T*
+(  - lines 74-83 smooth section-scroll behavior.) Tj
+T*
+(? Purpose: Smooth single-page nav with active highlighting.) Tj
+T*
+() Tj
+T*
+(5. `client/index.html`) Tj
+T*
+(? Key line:) Tj
+T*
+(  - favicon now uses `site-favicon.svg` to avoid Replit icon.) Tj
+T*
+(? Purpose: Root HTML document.) Tj
+T*
+() Tj
+T*
+() Tj
+T*
+(API AND DATA) Tj
+T*
+(------------) Tj
+T*
+() Tj
+T*
+(6. `server/index.ts`) Tj
+T*
+(? Key lines:) Tj
+T*
+(  - lines 15-23 body parsers + raw body capture.) Tj
+T*
+(  - lines 36-60 request timing and API logging middleware.) Tj
+T*
+(  - lines 81-86 production static vs development Vite mode.) Tj
+T*
+(  - lines 92-103 HTTP server bind config.) Tj
+T*
+(? Purpose: Main server bootstrap and middleware wiring.) Tj
+T*
+() Tj
+T*
+(7. `server/routes.ts`) Tj
+T*
+(? Key lines:) Tj
+ET
+BT /F1 9 Tf 50 30 Td (Page 4 of 8) Tj ET
+endstream
+endobj
+6 0 obj
+<< /Length 1828 >>
+stream
+BT
+/F1 10 Tf
+14 TL
+50 728 Td
+(  - lines 13-24 project endpoints.) Tj
+T*
+(  - lines 39-53 validated contact endpoint.) Tj
+T*
+(  - lines 63-143 startup seed workflow.) Tj
+T*
+(? Purpose: REST API contract implementation.) Tj
+T*
+() Tj
+T*
+(8. `server/storage.ts`) Tj
+T*
+(? Key lines:) Tj
+T*
+(  - lines 36-95 database-backed storage implementation.) Tj
+T*
+(  - lines 97-171 in-memory fallback implementation.) Tj
+T*
+(  - line 173 runtime storage selection.) Tj
+T*
+(? Purpose: Data source abstraction.) Tj
+T*
+() Tj
+T*
+(9. `shared/schema.ts`) Tj
+T*
+(? Key lines:) Tj
+T*
+(  - lines 8-46 table models for projects/skills/education/messages.) Tj
+T*
+(  - lines 50-53 insert schema generation.) Tj
+T*
+(  - lines 57-72 exported types used across app.) Tj
+T*
+(? Purpose: Single source of truth for DB and validation types.) Tj
+T*
+() Tj
+T*
+(10. `client/src/hooks/use-projects.ts`) Tj
+T*
+(? Key lines:) Tj
+T*
+(  - lines 4-13 projects list fetch + validation.) Tj
+T*
+(  - lines 15-27 project detail fetch logic.) Tj
+T*
+(? Purpose: Typed API fetching for project UI.) Tj
+T*
+() Tj
+T*
+(11. `client/src/hooks/use-contact.ts`) Tj
+T*
+(? Key lines:) Tj
+T*
+(  - lines 6-23 mutation for sending contact message.) Tj
+T*
+(? Purpose: Contact form submission logic.) Tj
+T*
+() Tj
+T*
+() Tj
+T*
+(BUILD AND RUNTIME) Tj
+T*
+(-----------------) Tj
+T*
+() Tj
+T*
+(12. `script/build.ts`) Tj
+T*
+(? Key lines:) Tj
+T*
+(  - line 36 clears `dist`.) Tj
+T*
+(  - line 39 runs Vite client build.) Tj
+T*
+(  - lines 49-61 bundles server as `dist/index.cjs`.) Tj
+T*
+(? Purpose: Production build pipeline.) Tj
+T*
+() Tj
+T*
+(13. `server/static.ts`) Tj
+T*
+(? Key lines:) Tj
+T*
+(  - lines 5-18 static serving and SPA fallback.) Tj
+T*
+(? Purpose: Serve built frontend in production.) Tj
+T*
+() Tj
+T*
+(14. `server/vite.ts`) Tj
+T*
+(? Key lines:) Tj
+ET
+BT /F1 9 Tf 50 30 Td (Page 5 of 8) Tj ET
+endstream
+endobj
+7 0 obj
+<< /Length 2041 >>
+stream
+BT
+/F1 10 Tf
+14 TL
+50 728 Td
+(  - lines 11-30 Vite middleware dev server setup.) Tj
+T*
+(  - lines 47-51 dynamic cache-busting in dev HTML template.) Tj
+T*
+(? Purpose: Development-time SSR-ish middleware delivery.) Tj
+T*
+() Tj
+T*
+() Tj
+T*
+(7\) WORKFLOW: REQUEST TO RENDER) Tj
+T*
+(------------------------------) Tj
+T*
+() Tj
+T*
+(1. Browser loads `/`.) Tj
+T*
+(2. `App.tsx` mounts providers + global background + Home page.) Tj
+T*
+(3. `Home.tsx` requests projects via `useProjects\(\)`.) Tj
+T*
+(4. Frontend calls Express route `/api/projects`.) Tj
+T*
+(5. `server/routes.ts` delegates to `storage`.) Tj
+T*
+(6. `storage` reads DB \(or memory fallback\).) Tj
+T*
+(7. JSON is returned and validated with shared schemas.) Tj
+T*
+(8. UI renders cards and interactions.) Tj
+T*
+() Tj
+T*
+() Tj
+T*
+(8\) LINE OF CODE SNAPSHOT \(CURRENT\)) Tj
+T*
+(----------------------------------) Tj
+T*
+() Tj
+T*
+(? Total code-like files scanned: 77 files) Tj
+T*
+(? Total lines scanned: 7,324 lines) Tj
+T*
+(? By area:) Tj
+T*
+(  - `client`: 6,551 lines) Tj
+T*
+(  - `server`: 511 lines) Tj
+T*
+(  - `shared`: 165 lines) Tj
+T*
+(  - `api + script`: 106 lines) Tj
+T*
+() Tj
+T*
+(Top heavy files \(by line count\):) Tj
+T*
+(? `client/src/components/ui/sidebar.tsx` \(727\)) Tj
+T*
+(? `client/src/components/ui/chart.tsx` \(365\)) Tj
+T*
+(? `client/src/pages/Home.tsx` \(283\)) Tj
+T*
+(? `client/src/components/EnergyBackground.tsx` \(282\)) Tj
+T*
+() Tj
+T*
+() Tj
+T*
+(9\) VISUAL DESIGN SYSTEM USED) Tj
+T*
+(----------------------------) Tj
+T*
+() Tj
+T*
+(? Primary accent: electric cyan family \(`#00f0ff` and related glows\).) Tj
+T*
+(? Base background: deep navy/blue tones with image-overlay blending.) Tj
+T*
+(? Motion system:) Tj
+T*
+(  - Typing animation for role text.) Tj
+T*
+(  - Cursor-smoke particles with dynamic color shift near bottom.) Tj
+T*
+(  - Neon wire animated lines \(Three.js\).) Tj
+T*
+(  - Section and component fade/slide reveals.) Tj
+T*
+(? Glass style:) Tj
+T*
+(  - Blurred, translucent, rounded controls for Contact and CV.) Tj
+ET
+BT /F1 9 Tf 50 30 Td (Page 6 of 8) Tj ET
+endstream
+endobj
+8 0 obj
+<< /Length 2540 >>
+stream
+BT
+/F1 10 Tf
+14 TL
+50 728 Td
+() Tj
+T*
+() Tj
+T*
+(10\) REFERENCES AND INSPIRATION) Tj
+T*
+(------------------------------) Tj
+T*
+() Tj
+T*
+(? Hover interaction direction requested by user: Aristide Benoist style behavior.) Tj
+T*
+(? Glass-inspired UI direction requested by user: modern Apple-like frosted components.) Tj
+T*
+(? External icon/logo sources used during iteration: Devicon CDN and related SVG icon sets.) Tj
+T*
+() Tj
+T*
+() Tj
+T*
+(11\) ITERATION HISTORY \(FROM THIS IMPLEMENTATION CYCLE\)) Tj
+T*
+(------------------------------------------------------) Tj
+T*
+() Tj
+T*
+(High-level progression:) Tj
+T*
+(1. Started with basic portfolio skeleton.) Tj
+T*
+(2. Fixed local run workflow and localhost serving.) Tj
+T*
+(3. Repaired runtime mismatch issues between build/dev paths.) Tj
+T*
+(4. Added energy background animation system.) Tj
+T*
+(5. Expanded cursor smoke effect to full-page behavior.) Tj
+T*
+(6. Added bottom-zone color transition for particles.) Tj
+T*
+(7. Switched gradient background to full-image background.) Tj
+T*
+(8. Aligned image to right side and tuned scaling.) Tj
+T*
+(9. Introduced and later removed separate Projects page.) Tj
+T*
+(10. Moved projects to main page.) Tj
+T*
+(11. Converted project browsing to horizontal strip using vertical wheel input.) Tj
+T*
+(12. Implemented bottom-only appearance logic for Contact/CV controls.) Tj
+T*
+(13. Added center-bottom signature line.) Tj
+T*
+(14. Replaced tab icon to remove Replit favicon.) Tj
+T*
+(15. Built and rebuilt production output repeatedly to validate each stage.) Tj
+T*
+() Tj
+T*
+(Approximate number of significant visual/behavior changes in this cycle: 15+.) Tj
+T*
+() Tj
+T*
+() Tj
+T*
+(12\) DIAGNOSTICS AND DEPLOYMENT ISSUES ENCOUNTERED) Tj
+T*
+(-------------------------------------------------) Tj
+T*
+() Tj
+T*
+(1. Node runtime mismatch with Vite \(`crypto.hash` issue\)) Tj
+T*
+(? Symptom: dev/build failed on Node 18 for Vite internals.) Tj
+T*
+(? Fix: used production build path and adjusted workflow accordingly.) Tj
+T*
+() Tj
+T*
+(2. Port binding and sandbox restrictions \(`EPERM`, `EADDRINUSE`\)) Tj
+T*
+(? Symptom: server could not bind or port already occupied.) Tj
+T*
+(? Fix: managed listener process, restarted services, verified active PID.) Tj
+T*
+() Tj
+T*
+(3. Asset not visible after adding image) Tj
+T*
+(? Symptom: image existed in `client/public` but not displayed.) Tj
+T*
+(? Root cause: running build output did not include latest asset yet.) Tj
+T*
+(? Fix: rebuild + restart so `dist/public` included the file.) Tj
+ET
+BT /F1 9 Tf 50 30 Td (Page 7 of 8) Tj ET
+endstream
+endobj
+9 0 obj
+<< /Length 1096 >>
+stream
+BT
+/F1 10 Tf
+14 TL
+50 728 Td
+() Tj
+T*
+(4. Type mismatch in route component \(historical\)) Tj
+T*
+(? Symptom: typed route prop mismatch when a separate Projects route existed.) Tj
+T*
+(? Fix: route architecture simplified to single-page flow.) Tj
+T*
+() Tj
+T*
+(5. Favicon mismatch \(Replit icon\)) Tj
+T*
+(? Symptom: browser tab still showed unwanted icon.) Tj
+T*
+(? Fix: changed root HTML favicon link to custom SVG in `client/public/site-favicon.svg`.) Tj
+T*
+() Tj
+T*
+() Tj
+T*
+(13\) HOW TO RUN) Tj
+T*
+(--------------) Tj
+T*
+() Tj
+T*
+() Tj
+T*
+(npm install) Tj
+T*
+(npm run dev) Tj
+T*
+() Tj
+T*
+() Tj
+T*
+(Production:) Tj
+T*
+() Tj
+T*
+(npm run build) Tj
+T*
+(npm start) Tj
+T*
+() Tj
+T*
+() Tj
+T*
+() Tj
+T*
+(14\) NON-TECHNICAL SUMMARY) Tj
+T*
+(-------------------------) Tj
+T*
+() Tj
+T*
+(This is a polished portfolio website where animation, design, and interaction were refined) Tj
+T*
+(through many iterations. The final system uses modern web tools, typed APIs, and careful UI) Tj
+T*
+(behavior so the site feels professional while staying maintainable.) Tj
+T*
+() Tj
+ET
+BT /F1 9 Tf 50 30 Td (Page 8 of 8) Tj ET
+endstream
+endobj
+10 0 obj
+<< /Type /Pages /Kids [11 0 R 12 0 R 13 0 R 14 0 R 15 0 R 16 0 R 17 0 R 18 0 R] /Count 8 >>
+endobj
+11 0 obj
+<< /Type /Page /Parent 10 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 1 0 R >> >> /Contents 2 0 R >>
+endobj
+12 0 obj
+<< /Type /Page /Parent 10 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 1 0 R >> >> /Contents 3 0 R >>
+endobj
+13 0 obj
+<< /Type /Page /Parent 10 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 1 0 R >> >> /Contents 4 0 R >>
+endobj
+14 0 obj
+<< /Type /Page /Parent 10 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 1 0 R >> >> /Contents 5 0 R >>
+endobj
+15 0 obj
+<< /Type /Page /Parent 10 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 1 0 R >> >> /Contents 6 0 R >>
+endobj
+16 0 obj
+<< /Type /Page /Parent 10 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 1 0 R >> >> /Contents 7 0 R >>
+endobj
+17 0 obj
+<< /Type /Page /Parent 10 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 1 0 R >> >> /Contents 8 0 R >>
+endobj
+18 0 obj
+<< /Type /Page /Parent 10 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 1 0 R >> >> /Contents 9 0 R >>
+endobj
+19 0 obj
+<< /Type /Catalog /Pages 10 0 R >>
+endobj
+xref
+0 20
+0000000000 65535 f 
+0000000015 00000 n 
+0000000085 00000 n 
+0000001776 00000 n 
+0000003128 00000 n 
+0000004917 00000 n 
+0000006980 00000 n 
+0000008860 00000 n 
+0000010953 00000 n 
+0000013545 00000 n 
+0000014693 00000 n 
+0000014801 00000 n 
+0000014929 00000 n 
+0000015057 00000 n 
+0000015185 00000 n 
+0000015313 00000 n 
+0000015441 00000 n 
+0000015569 00000 n 
+0000015697 00000 n 
+0000015825 00000 n 
+trailer
+<< /Size 20 /Root 19 0 R >>
+startxref
+15876
+%%EOF

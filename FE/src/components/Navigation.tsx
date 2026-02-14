@@ -1,4 +1,4 @@
-import { Link, useLocation } from "wouter";
+import { useLocation } from "wouter";
 import { cn } from "@/lib/utils";
 import { motion } from "framer-motion";
 import { useEffect, useMemo, useState, type MouseEvent } from "react";
@@ -7,6 +7,7 @@ const sectionLinks = [
   { id: "home", label: "Home" },
   { id: "about", label: "Background" },
   { id: "skills", label: "Skills" },
+  { id: "projects", label: "Projects" },
   { id: "contact", label: "Contact" },
 ];
 
@@ -36,12 +37,7 @@ export function Navigation() {
   const [location] = useLocation();
   const [activeSection, setActiveSection] = useState("home");
 
-  const activeKey = useMemo(() => {
-    if (location === "/projects") {
-      return "projects";
-    }
-    return activeSection;
-  }, [location, activeSection]);
+  const activeKey = useMemo(() => activeSection, [activeSection]);
 
   useEffect(() => {
     if (location !== "/") {
@@ -116,23 +112,6 @@ export function Navigation() {
             </a>
           );
         })}
-        <Link href="/projects" className="relative">
-          <div
-            className={cn(
-              "px-6 py-2 rounded-full text-sm font-medium transition-colors duration-200 cursor-pointer relative z-10",
-              activeKey === "projects" ? "text-primary-foreground" : "text-muted-foreground hover:text-foreground"
-            )}
-          >
-            Projects
-          </div>
-          {activeKey === "projects" && (
-            <motion.div
-              layoutId="nav-pill"
-              className="absolute inset-0 bg-primary rounded-full z-0 shadow-[0_0_15px_rgba(0,240,255,0.5)]"
-              transition={{ type: "spring", stiffness: 300, damping: 30 }}
-            />
-          )}
-        </Link>
       </div>
     </nav>
   );
